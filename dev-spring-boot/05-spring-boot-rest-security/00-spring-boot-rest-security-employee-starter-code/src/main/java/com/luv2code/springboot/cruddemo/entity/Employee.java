@@ -1,11 +1,10 @@
 package com.luv2code.springboot.cruddemo.entity;
 
-
 import jakarta.persistence.*;
 
 @Entity
 @Table(name="employee")
-public class Employee   {
+public class Employee {
 
     // define fields
     @Id
@@ -14,26 +13,28 @@ public class Employee   {
     private int id;
 
     @Column(name="first_name")
-    private String firstname;
+    private String firstName;
 
     @Column(name="last_name")
-    private String lastname;
+    private String lastName;
 
     @Column(name="email")
     private String email;
 
+
     // define constructors
-    public Employee(){
+    public Employee() {
 
     }
 
-    public Employee(String email, String firstname, String lastname) {
+    public Employee(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
-        this.firstname = firstname;
-        this.lastname = lastname;
     }
 
     // define getter/setter
+
     public int getId() {
         return id;
     }
@@ -42,12 +43,20 @@ public class Employee   {
         this.id = id;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -58,22 +67,22 @@ public class Employee   {
         this.email = email;
     }
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
     // define toString
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
 }
+
+
+
+
+
+
+
+
