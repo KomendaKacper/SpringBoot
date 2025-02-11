@@ -52,4 +52,3 @@ Through this repository, you will:
 ---
 
 Happy learning! 😊
-```
